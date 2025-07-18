@@ -9,6 +9,10 @@ It integrates **deep learning**, **OCR (Optical Character Recognition)**, **PDF 
 
 ## Features
 
+<p align="center">
+  <img src="media/show.png" alt="Demo Interface" width="800"/>
+</p>
+
 - **User-friendly GUI** for doctors and administrators.
 - **Automated image enhancement and segmentation**:
   - Super-resolution reconstruction (SPIN).
@@ -53,23 +57,15 @@ python main.py
 You will be prompted with a login screen.
 Default login accounts:
 ```bash
-	•	Administrator: admin / 123456
-	•	Doctor: jzpei / 123456
+Administrator: admin / 123456
+Doctor: jzpei / 123456
+# Note: Avoid using Chinese characters in file paths when importing images.
 ```
-Note: Avoid using Chinese characters in file paths when importing images.
-
----
-
-## Output & Logs
-
-During usage, the system will generate:
-	•	save/: Exported results (images, reports).
-	•	log/: Operation logs.
-	•	head/: User avatar images.
 
 ---
 
 ## Demo
+
 <p align="center">
   <img src="media/demo.gif" alt="Demo Interface" width="800"/>
 </p>
@@ -114,7 +110,7 @@ For **data requests, academic collaborations, or presentation materials**:
 
 ## Acknowledgment
 
-Special thanks to **Pei Jingjing** and **Ma Hao** for their significant contributions to the development of this application.
+Special thanks to **Jingjing Pei** and **Hao Ma** for their significant contributions to the development of this application.
 
 
 
