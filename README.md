@@ -9,10 +9,6 @@ It integrates **deep learning**, **OCR (Optical Character Recognition)**, **PDF 
 
 ## Features
 
-<p align="center">
-  <img src="media/show.png" alt="Demo Interface" width="800"/>
-</p>
-
 - **User-friendly GUI** for doctors and administrators.
 - **Automated image enhancement and segmentation**:
   - Super-resolution reconstruction (SPIN).
