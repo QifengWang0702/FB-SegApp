@@ -1,0 +1,76 @@
+# Super-resolution rebuild param
+rebuild:
+  model:
+    SPIN_path: 'spin_best_model_resolve.pt'
+    FSRCNN_path: 'fsrcnn_best_model_resolve.pb'
+  param: 'spin_light_x2.yml'
+
+#Image correction
+correct:
+  model:
+    YOLO_path: 'yolov8_best_model_correct.pt'
+  param:
+    reSize: [1000, 750]
+    dstSize: [960, 720]
+
+# CCC&CV seg param
+segmentation:
+  model:
+    CCC_path: 'unet_ds_best_model_CSP.pth'
+    CV_path: 'unet_ds_best_model_CV.pth'
+  param:
+    net_type: 'unet_ds'
+    in_chns: 1
+    class_num: 2
+    size: 256
+    lengthScale: 0.035278
+    areaScale: 0.00124456
+  normal:
+    CAreaScale: [4.5, 6.5]
+    CLengthScale: [4, 6]
+    VAreaScale: [3, 4]
+    VLengthScale: [2.5, 3.5]
+
+# Create pdf font
+TTFont:
+  TNR: 'Times New Roman.ttf'
+  TNRB: 'Times-New-Roman-Bold.ttf'
+  ST: 'SimSun.ttf'
+
+# Database configs
+database:
+  path: 'prenatal.db'
+  pageCount: 14
+
+# Updatable options
+update:
+  pregnant_A: ['name', 'age', 'pregweek', 'doctor', 'result']
+  pregnant_D: ['pregweek', 'result']
+  doctor_A: ['loginName', 'password', 'identity', 'cardId', 'gender', 'department']
+  doctor_D: ['loginName', 'password', 'cardId', 'gender', 'department']
+  not_null: ['reportId', 'name', 'doctor', 'result', 'userId', 'loginName', 'password', 'identity', 'cardId']
+
+# Save paths
+save:
+  configs: './configs'
+  pic: './pic'
+  head: './head'
+  temp: './save/temp'
+  import: './save/import'
+  capture: './save/capture'
+  preprocess: './save/preprocess'
+  CCC: './save/CCC'
+  CV: './save/CV'
+  visual: './save/visual'
+  report: './save/report'
+
+# Picture configs
+picture:
+  ico: 'bh.ico'
+  tutorial: 'tutorial.pdf'
+  head: 'user_head.png'
+  logo: 'logo.png'
+  homes: ['home_0.png', 'home_1.png', 'home_2.png', 'home_3.png', 'home_4.png']
+  cover: 'cover.png'
+  login: 'login.png'
+  hospital: 'shengjing.png'
